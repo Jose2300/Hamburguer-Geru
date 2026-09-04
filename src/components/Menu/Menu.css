@@ -1,0 +1,136 @@
+.menu {
+  padding: 120px 8%;
+
+  background: #11100e;
+
+  color: #fff;
+}
+
+.menu-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: end;
+
+  margin-bottom: 60px;
+}
+
+.menu-header span {
+  color: #ff7a00;
+
+  font-size: 0.8rem;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.menu-header h2 {
+  margin-top: 15px;
+
+  font-size: clamp(2.5rem, 5vw, 5rem);
+
+  line-height: 1;
+}
+
+.menu-header strong {
+  color: #ff7a00;
+}
+
+.menu-header > p {
+  max-width: 300px;
+
+  color: #888;
+
+  line-height: 1.6;
+}
+
+.menu-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.menu-card {
+  overflow: hidden;
+
+  background: #191715;
+
+  border: 1px solid #292725;
+
+  transition: 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #ff7a00;
+}
+
+.menu-image {
+  height: 250px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(232, 93, 4, 0.3),
+      transparent 60%
+    );
+
+  font-size: 8rem;
+}
+
+.menu-info {
+  padding: 25px;
+}
+
+.menu-info h3 {
+  font-size: 1.4rem;
+}
+
+.menu-info p {
+  min-height: 50px;
+
+  color: #888;
+
+  line-height: 1.5;
+}
+
+.menu-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 25px;
+}
+
+.menu-footer strong {
+  color: #ff7a00;
+
+  font-size: 1.2rem;
+}
+
+.menu-footer button {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #ff7a00;
+
+  color: #fff;
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+}

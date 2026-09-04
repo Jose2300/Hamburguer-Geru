@@ -1,0 +1,29 @@
+.footer {
+  padding: 60px 8%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  background: #070605;
+
+  border-top: 1px solid #242220;
+
+  color: #fff;
+}
+
+.footer h2 {
+  letter-spacing: 3px;
+}
+
+.footer h2 span {
+  color: #ff7a00;
+}
+
+.footer p {
+  color: #777;
+}
+
+.footer-right {
+  text-align: right;
+}
