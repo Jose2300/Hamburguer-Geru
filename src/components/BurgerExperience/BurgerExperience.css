@@ -1,89 +1,561 @@
+
+
 .experience {
-  min-height: 80vh;
+  position: relative;
+  width: 100%;
+  min-height: 180vh;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 
   padding: 100px 8%;
 
-  display: grid;
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      rgba(255, 90, 25, 0.16),
+      transparent 35%
+    ),
+    #090807;
 
-  grid-template-columns: 1fr 1fr;
-
-  align-items: center;
-
-  gap: 80px;
-
-  background: #0a0807;
+  overflow: clip;
 }
 
+
+/* =========================================
+   BRILHO DE FUNDO
+========================================= */
+
+.experience-glow {
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  top: 8%;
+  left: 12%;
+
+  border-radius: 50%;
+
+  background: rgba(255, 80, 20, 0.16);
+
+  filter: blur(110px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   FUMAÇA
+========================================= */
+
+.experience-smoke {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  filter: blur(70px);
+
+  pointer-events: none;
+
+  animation: smoke 8s ease-in-out infinite;
+}
+
+.experience-smoke-1 {
+  width: 320px;
+  height: 320px;
+
+  top: 5%;
+  left: 15%;
+}
+
+.experience-smoke-2 {
+  width: 240px;
+  height: 240px;
+
+  top: 40%;
+  left: 38%;
+
+  animation-delay: 3s;
+}
+
+@keyframes smoke {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-30px) scale(1.1);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================
+   ÁREA DO HAMBÚRGUER
+========================================= */
+
 .experience-image {
-  min-height: 500px;
+  position: sticky;
+
+  top: 0;
+
+  width: 55%;
+  height: 100vh;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
 
-  border-radius: 20px;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding-top: 70px;
+
+  z-index: 10;
+}
+
+
+/* =========================================
+   HAMBÚRGUER
+========================================= */
+
+.experience-burger {
+  position: relative;
+
+  width: 600px;
+  height: 650px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transform-origin: center center;
+}
+
+
+/* =========================================
+   LUZ ATRÁS DO BURGER
+========================================= */
+
+.burger-light {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: 70px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
 
   background:
     radial-gradient(
       circle,
-      rgba(232, 93, 4, 0.3),
-      transparent 60%
-    ),
-    #151311;
+      rgba(255, 100, 30, 0.32),
+      rgba(255, 70, 20, 0.12) 45%,
+      transparent 70%
+    );
+
+  filter: blur(10px);
+
+  z-index: 1;
 }
 
-.experience-burger {
-  font-size: 13rem;
 
-  filter: drop-shadow(0 30px 30px rgba(0, 0, 0, 0.6));
+/* =========================================
+   TODAS AS CAMADAS
+========================================= */
 
-  animation: floating 4s ease-in-out infinite;
+.burger-layer {
+  position: absolute;
+
+  left: 50%;
+
+  width: 500px;
+  height: auto;
+
+  margin-left: -250px;
+
+  object-fit: contain;
+
+  pointer-events: none;
+  user-select: none;
+
+  filter:
+    drop-shadow(0 20px 20px rgba(0, 0, 0, 0.45));
+
+  will-change: transform;
 }
+
+
+/* =========================================
+   POSIÇÃO INICIAL DAS CAMADAS
+========================================= */
+
+/* Pão de cima */
+.bun-top {
+  top: 35px;
+  z-index: 8;
+}
+
+/* Cheddar superior */
+.cheese-top {
+  top: 145px;
+  z-index: 7;
+}
+
+/* Carne superior */
+.burger-top {
+  top: 180px;
+  z-index: 6;
+}
+
+/* Bacon */
+.bacon {
+  top: 245px;
+  z-index: 5;
+}
+
+/* Cheddar inferior */
+.cheese-bottom {
+  top: 285px;
+  z-index: 4;
+}
+
+/* Carne inferior */
+.burger-bottom {
+  top: 320px;
+  z-index: 3;
+}
+
+/* Pão inferior */
+.bun-bottom {
+  top: 400px;
+  z-index: 2;
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.experience-content {
+  position: sticky;
+
+  top: 20vh;
+
+  width: 40%;
+
+  margin-left: 5%;
+
+  z-index: 20;
+}
+
+
+/* Pequeno título */
 
 .experience-content span {
-  color: #ff7a00;
+  display: inline-block;
 
-  font-size: 0.8rem;
+  margin-bottom: 20px;
+
+  color: #ff6425;
+
+  font-size: 12px;
   font-weight: 800;
 
   letter-spacing: 3px;
 }
 
+
+/* Título */
+
 .experience-content h2 {
-  margin: 20px 0;
+  margin: 0;
 
-  color: #fff;
+  color: #ffffff;
 
-  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-size: clamp(45px, 5vw, 75px);
 
-  line-height: 1;
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+
+  font-weight: 900;
 }
 
-.experience-content strong {
-  color: #ff7a00;
+.experience-content h2 strong {
+  color: #ff6425;
 }
+
+
+/* Texto */
 
 .experience-content p {
-  max-width: 500px;
-
-  color: #999;
-
-  line-height: 1.8;
-}
-
-.experience-content a {
-  display: inline-block;
+  max-width: 430px;
 
   margin-top: 30px;
 
-  color: #fff;
+  color: #aaaaaa;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+.experience-content a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+
+  color: #ffffff;
 
   text-decoration: none;
-  font-weight: 700;
 
-  transition: 0.3s;
+  font-weight: 800;
+
+  transition: 0.3s ease;
+}
+
+.experience-content a span {
+  margin: 0;
+
+  color: #ff6425;
+
+  font-size: 20px;
+
+  transition: 0.3s ease;
 }
 
 .experience-content a:hover {
-  color: #ff7a00;
+  color: #ff6425;
 }
+
+.experience-content a:hover span {
+  transform: translateX(6px);
+}
+
+
+/* =========================================
+   INDICADOR DE SCROLL
+========================================= */
+
+.experience-scroll {
+  position: absolute;
+
+  left: 50%;
+  bottom: 35px;
+
+  transform: translateX(-50%);
+
+  z-index: 30;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #777777;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.experience-scroll strong {
+  color: #ff6425;
+
+  font-size: 22px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .experience {
+    min-height: 160vh;
+
+    padding: 80px 5%;
+  }
+
+  .experience-image {
+    width: 55%;
+
+    padding-top: 60px;
+  }
+
+  .experience-content {
+    width: 45%;
+
+    margin-left: 0;
+  }
+
+  .experience-burger {
+    width: 500px;
+    height: 550px;
+  }
+
+  .burger-layer {
+    width: 420px;
+
+    margin-left: -210px;
+  }
+
+  .burger-light {
+    width: 430px;
+    height: 430px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .experience {
+    min-height: 1200px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 80px 20px;
+  }
+
+  .experience-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 550px;
+
+    padding-top: 0;
+  }
+
+  .experience-burger {
+    width: 420px;
+    height: 500px;
+  }
+
+  .burger-layer {
+    width: 340px;
+
+    margin-left: -170px;
+  }
+
+  .burger-light {
+    width: 350px;
+    height: 350px;
+  }
+
+  .experience-content {
+    position: relative;
+
+    top: auto;
+
+    width: 100%;
+
+    margin: 20px 0 0;
+
+    text-align: center;
+  }
+
+  .experience-content h2 {
+    font-size: 50px;
+
+    letter-spacing: -3px;
+  }
+
+  .experience-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .experience-content a {
+    justify-content: center;
+  }
+
+  .experience-scroll {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   MOBILE PEQUENO
+========================================= */
+
+@media (max-width: 480px) {
+
+  .experience {
+    min-height: 1100px;
+
+    padding: 60px 15px;
+  }
+
+  .experience-image {
+    height: 450px;
+  }
+
+  .experience-burger {
+    width: 350px;
+    height: 430px;
+  }
+
+  .burger-layer {
+    width: 290px;
+
+    margin-left: -145px;
+  }
+
+  .burger-light {
+    width: 300px;
+    height: 300px;
+  }
+
+  .experience-content h2 {
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+  .experience-content p {
+    font-size: 15px;
+  }
+
+  .experience-content span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+}
+
