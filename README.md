@@ -1,75 +1,116 @@
-# React + TypeScript + Vite
+# 🍔 Burger Geru
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**O hambúrguer que você merece!**
 
-Currently, two official plugins are available:
+O Burger Geru é um site desenvolvido para uma hamburgueria, com uma identidade visual moderna inspirada no fogo, na brasa e no sabor dos hambúrgueres artesanais. O projeto busca proporcionar uma experiência agradável e intuitiva, permitindo que os clientes conheçam o cardápio e montem seus pedidos de forma prática.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 Sobre o projeto
 
-## React Compiler
+O site apresenta a identidade da hamburgueria, seus produtos e uma experiência visual interativa, com foco na usabilidade e na apresentação dos hambúrgueres.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+- 🍔 Apresentação da hamburgueria.
+- 🔥 Design inspirado em fogo, fumaça e hambúrgueres artesanais.
+- 🥓 Cardápio com imagens e informações dos produtos.
+- 🛒 Carrinho de compras para organizar os pedidos.
+- 📝 Formulário para informar nome, endereço de entrega e forma de pagamento.
+- 📱 Integração com WhatsApp para encaminhamento dos pedidos.
+- 📱 Interface adaptável a diferentes tamanhos de tela.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologias utilizadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React** — construção da interface.
+- **TypeScript** — tipagem e organização do código.
+- **Vite** — ambiente de desenvolvimento e build.
+- **CSS3** — estilização e responsividade.
+- **Framer Motion** — animações e interações.
+- **Lucide React** — ícones da interface.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Como executar o projeto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Pré-requisitos
 
+- Node.js instalado.
+- npm instalado.
+- Git instalado, caso queira clonar o repositório.
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/SEU-USUARIO/burger-geru.git
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Acesse a pasta
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd burger-geru
 ```
+
+### 3. Instale as dependências
+
+```bash
+npm install
+```
+
+### 4. Execute o projeto
+
+```bash
+npm run dev
+```
+
+Abra no navegador o endereço local apresentado no terminal.
+
+### 5. Gere a versão de produção
+
+```bash
+npm run build
+```
+
+Os arquivos gerados ficarão na pasta `dist`.
+
+## 📂 Estrutura do projeto
+
+```text
+burger-geru/
+├── public/
+├── src/
+│   ├── assets/
+│   │   └── burger/
+│   ├── components/
+│   │   ├── Header/
+│   │   ├── Hero/
+│   │   ├── Benefits/
+│   │   ├── BurgerExperience/
+│   │   ├── Menu/
+│   │   └── Footer/
+│   ├── pages/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── global.css
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
+
+*Observação: a estrutura acima é ilustrativa e pode variar conforme a organização atual do projeto.*
+
+## 🎯 Objetivo
+
+Desenvolver uma experiência digital para uma hamburgueria, unindo design, interatividade e praticidade, além de aplicar conhecimentos de desenvolvimento front-end em um projeto prático.
+
+## 🌐 Deploy
+
+O projeto pode ser publicado na [Vercel](https://vercel.com/), permitindo acesso ao site pela internet.
+
+**Site:** adicione aqui o link da versão publicada.
+
+## 👨‍💻 Desenvolvedor
+
+Projeto desenvolvido por um profissional formado em Ciência da Computação, como aplicação prática de conhecimentos em desenvolvimento web.
+
+---
+
+⭐ Se você gostou do projeto, deixe uma estrela no repositório!
+
