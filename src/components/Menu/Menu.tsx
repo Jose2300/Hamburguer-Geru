@@ -17,7 +17,7 @@ import "./Menu.css";
 
 // Informe o WhatsApp da hamburgueria com código do Brasil + DDD + número.
 // Exemplo fictício: "5579999999999". Use somente números.
-const WHATSAPP_NUMERO = "5579988099285";
+const WHATSAPP_NUMERO = "";
 
 type Product = {
   id: string;
